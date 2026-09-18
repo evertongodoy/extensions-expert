@@ -1,0 +1,27 @@
+{
+  "manifest_version": 3,
+  "name": "Kahoot — Inseridor por DOCX v15",
+  "version": "15.0.0",
+  "description": "Lê questões de um DOCX e preenche quizzes no editor do Kahoot.",
+  "permissions": [
+    "activeTab",
+    "scripting"
+  ],
+  "host_permissions": [
+    "https://create.kahoot.it/*"
+  ],
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://create.kahoot.it/*"
+      ],
+      "js": [
+        "content.js"
+      ],
+      "run_at": "document_idle"
+    }
+  ]
+}

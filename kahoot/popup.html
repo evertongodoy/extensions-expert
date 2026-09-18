@@ -1,0 +1,11 @@
+<!doctype html><html lang="pt-BR"><head><meta charset="utf-8"><style>
+body{font-family:Arial,sans-serif;width:330px;padding:14px;margin:0}h2{font-size:17px;margin:0 0 10px}.box{background:#f4f4f6;border-radius:8px;padding:10px;margin-bottom:10px}label{font-size:12px;font-weight:bold;display:block;margin:8px 0 4px}input[type=file],input[type=number]{width:100%;box-sizing:border-box}button{width:100%;padding:9px;margin-top:7px;border:0;border-radius:6px;cursor:pointer;font-weight:bold}.primary{background:#46178f;color:#fff}.secondary{background:#eee}.danger{background:#d93025;color:#fff}#status{font-size:12px;white-space:pre-wrap;margin-top:9px}.ok{color:#167c3a;font-weight:bold}small{display:block;line-height:1.35;color:#555}
+</style></head><body>
+<h2>Kahoot — Inseridor por DOCX</h2>
+<div class="box"><label>1. Adicione o DOCX com as questões</label><input id="docx" type="file" accept=".docx,application/vnd.openxmlformats-officedocument.wordprocessingml.document"><div id="fileInfo"><small>Nenhum arquivo carregado.</small></div></div>
+<div style="font-size:11px;line-height:1.4;margin:4px 0 10px;color:#333;"><strong>Questões podem ter 120 caracteres e alternativas podem ter 75.</strong></div>
+<label>Começar na questão</label><input id="start" type="number" min="1" value="1">
+<label>Espera entre questões (ms)</label><input id="delay" type="number" min="1500" value="3000">
+<button id="one" class="secondary" disabled>Inserir atual</button><button id="all" class="primary" disabled>Executar todas</button><button id="stop" class="danger">Parar</button>
+<div id="status">Selecione primeiro um DOCX.</div>
+<script src="docx-reader.js"></script><script src="popup.js"></script></body></html>
