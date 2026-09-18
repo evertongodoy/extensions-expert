@@ -4,6 +4,42 @@ Este documento contém todas as especificações e regras obrigatórias para a g
 
 ---
 
+## 🛠️ Como Instalar a Extensão no Google Chrome
+
+Para instalar e ativar a extensão no seu navegador Chrome, siga os passos abaixo:
+
+1. **Abra a tela de extensões do Chrome:**
+   - Digite `chrome://extensions/` na barra de endereços do Chrome e pressione **Enter**;
+   - Ou clique nos **três pontinhos** no canto superior direito do navegador > **Extensões** > **Gerenciar extensões**.
+2. **Ative o "Modo do desenvolvedor":**
+   - No canto superior direito da página `chrome://extensions/`, ative a chave seletora **Modo do desenvolvedor** (*Developer mode*).
+3. **Carregue a extensão:**
+   - No canto superior esquerdo, clique no botão **Carregar sem compactação** (*Load unpacked*).
+   - Na janela de arquivos, selecione a pasta **`kahoot`** do projeto (a pasta que contém o arquivo `manifest.json`).
+4. **Fixe o ícone para acesso rápido:**
+   - Clique no ícone de quebra-cabeça 🧩 (menu de extensões) ao lado da barra de endereços do Chrome.
+   - Localize a extensão e clique no alfinete 📌 para fixá-la na barra de ferramentas.
+
+> [!TIP]
+> **Dica de atualização:** Sempre que houver alguma alteração nos arquivos da extensão (`content.js`, `popup.js`, etc.), basta voltar na página `chrome://extensions/` e clicar no botão de recarregar 🔄 no card da extensão.
+
+---
+
+## 📌 Pré-requisitos para Importação na Extensão
+
+Para que a extensão funcione e insira as questões corretamente na sua conta do Kahoot:
+
+1. **Estar logado:** Certifique-se de que você já fez login na sua conta do [Kahoot!](https://create.kahoot.it/).
+2. **Acessar a página de rascunhos:** Acesse diretamente a página:
+   👉 [https://create.kahoot.it/my-library/kahoots/drafts](https://create.kahoot.it/my-library/kahoots/drafts)
+3. **Iniciar a criação:** Na página, clique no botão **Create** (ou **Criar**) no topo para abrir o editor de um novo Kahoot (ou abra um rascunho existente).
+4. **Abrir a extensão:** Com o editor do Kahoot aberto na aba ativa do navegador, abra o popup da extensão, selecione o arquivo `.docx` gerado e clique em **Inserir todas** (ou **Inserir uma**).
+
+> [!IMPORTANT]
+> A aba ativa do seu navegador deve ser a do editor do Kahoot (`https://create.kahoot.it/...`). Se a extensão for acionada fora do editor, ela emitirá um aviso pedindo para abrir o editor antes de continuar.
+
+---
+
 ## 1. Regras Fundamentais e Limites de Caracteres
 
 | Elemento | Limite Máximo | Obrigatório | Observação |
@@ -110,3 +146,4 @@ Antes de carregar o arquivo `.docx` na extensão:
 - [ ] Todas as questões possuem exatamente **uma alternativa com o emoji ✅**.
 - [ ] O documento não contém introduções, títulos genéricos ou conclusões.
 - [ ] O arquivo está salvo na extensão `.docx`.
+- [ ] Você está logado no Kahoot e com o editor aberto a partir da página [drafts](https://create.kahoot.it/my-library/kahoots/drafts) (botão **Create**).
